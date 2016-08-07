@@ -1,9 +1,9 @@
-1. sol india is in blue color, logo on front page, left top.
-2. transparent button background.
-3. add more content in about us.
-4. gallery changes
-5. know your potential heading- enter area give kilowatt app  --equation
-6. approximate wattage of equipments --equipments
-7. more photos 
-8. our unique products
-9. if you are <customers> then we must do this!
+1. sol india is in blue color, logo on front page, left top. (completed but clearity is not visible i am chacking the bug)
+2. transparent button background(completed)
+3. add more content in about us.(cmp)
+4. gallery changes(cmp)
+5. know your potential heading- enter area give kilowatt app  --equation(dnt noe)
+6. approximate wattage of equipments --equipments(dnt noe)
+7. more photos (cmp)
+8. our unique products(this heading is added )
+9. if you are <customers> then we must do this!(where to add this)
