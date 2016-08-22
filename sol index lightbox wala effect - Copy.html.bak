@@ -10,6 +10,12 @@
     <meta name="author" content="Software Developers DTU">
 
     <title>SOL India-Solar Solutions-Solar Panels-Solar Energy</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
     <link rel="shortcut icon" type="image/x-icon" href="./img/SOL_India_Icon.gif" />
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +44,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <!-- Magnific Popup core JS file -->
-<script src="dist/jquery.magnific-popup.js"></script>
+<!--script src="dist/jquery.magnific-popup.js"></script-->
 <script type="text/javascript" src="js/jquerysliderhtml.js"></script>
 <!-- End WOW Slider.com HEAD section -->
 <!-- You add something in your code like this , save it like you do-->
@@ -60,7 +66,14 @@
 
 
 </style>
-</head>
+
+	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	</script-->
+	<!-- End WOWSlider.com HEAD section -->
+	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<!--script type="text/javascript" src="engine1/jquery.js"></script-->
+	<!-- End WOWSlider.com HEAD section --></head>
 
 <body>
 
@@ -100,26 +113,43 @@
         </ul>
     </nav>
 
+    
+
+
+
+
     <!-- Header -->
 <!--<header id="left" class="header" style="background-color:transparent;padding-top:0%;">
 <a href="index.html">
 <img style="margin-top:0.5%;" src="./img/SOL_India_Logo.gif">
 </a>
 -->
+    <!--
     <header id="top" class="header" style="margin-top:0%;">
        
  
-        <div class="text-vertical-center">
-           
-            <h1 class="zoomIn animated" style="text-shadow:0.1px 0.1px 0.2px #FF8735;">SOL INDIA</h1>
-            <h3>Embrace Clean Tech</h3>
-            <br>
-            <a href="#about" class="zoomIn animated btn btn-dark btn-lg">Consume Greener Energy.<br> Be A Market Leader.<br> Discover More.</a>
-        </div>
-    </header>
-</header>
-    <!-- About -->
-    <section id="about" class="about">
+        
+	<!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
+	<div id="wowslider-container1">
+	<div class="ws_images"><ul>
+		<li><img src="data1/images/sol_india1.jpg" alt="SOL india-1" title="SOL india-1" id="wows1_0"/></li>
+		<li><img src="data1/images/sol_india11.jpg" alt="SOL india-11" title="SOL india-11" id="wows1_1"/></li>
+		<li><img src="data1/images/sol_india2.jpg" alt="SOL india-2" title="SOL india-2" id="wows1_2"/></li>
+		<li><a href="http://wowslider.com/vi"><img src="data1/images/sol_india3.jpg" alt="bootstrap carousel" title="SOL india-3" id="wows1_3"/></a></li>
+		<li><img src="data1/images/sol_india4.jpg" alt="SOL india-4" title="SOL india-4" id="wows1_4"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="SOL india-1"><span><img src="data1/tooltips/sol_india1.jpg" alt="SOL india-1"/>1</span></a>
+		<a href="#" title="SOL india-11"><span><img src="data1/tooltips/sol_india11.jpg" alt="SOL india-11"/>2</span></a>
+		<a href="#" title="SOL india-2"><span><img src="data1/tooltips/sol_india2.jpg" alt="SOL india-2"/>3</span></a>
+		<a href="#" title="SOL india-3"><span><img src="data1/tooltips/sol_india3.jpg" alt="SOL india-3"/>4</span></a>
+		<a href="#" title="SOL india-4"><span><img src="data1/tooltips/sol_india4.jpg" alt="SOL india-4"/>5</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com/vi">cssslider</a> by WOWSlider.com v8.7</div>
+	<div class="ws_shadow"></div>
+	</div>	
+	<script type="text/javascript" src="engine1/wowslider.js"></script>
+	<script type="text/javascript" src="engine1/script.js"></script>
+	<!-- End WOWSlider.com BODY section --><section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -171,6 +201,7 @@ products to households and businesses.</p>
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <!-- aligning these things inside an column -->
     <section id="services" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
@@ -242,6 +273,34 @@ products to households and businesses.</p>
         <!-- /.container -->
     </section>
 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Portfolio -->
    <!-- <section id="portfolio" class="portfolio">
         <div class="container">
@@ -302,9 +361,7 @@ products to households and businesses.</p>
      <a class="galleryItem" href=".\img\portfolio-3co - Copy.jpg"> <img src=".\img\portfolio-3co - Copy.jpg"> </a> 
      <a class="galleryItem" href=".\img\portfolio-4co.jpg"> <img src=".\img\portfolio-4co.jpg"> </a>
      
-
-
- </div>
+</div>
 
 
 
@@ -375,6 +432,7 @@ products to households and businesses.</p>
 
 
                     <!-- Start WOW Slider.com BODY section -->
+                    <!--
 <div id="wowslider-container1" style="padding-top:7%;width:100%;margin-bottom:10%;margin-top:0.01%;">
 <div class="ws_images"><ul>
 <li><img style="width:100%;height:100%;" src=".\img\bg.jpg" alt="Golden Solar Wall" title="Golden Solar Wall" id="wows1_0"/>San Francisco, California and Marin County</li>
@@ -444,7 +502,11 @@ products to households and businesses.</p>
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h3>Be a smart business. Increase your business margins with lower operating costs.</h3>
-                    <a target="_blank" href="./files/Benefits.jpg" class="btn btn-lg btn-light">View Customer Benefits</a>
+                   
+
+<a class="galleryItem" href="./files/Benefits.jpg">
+                    <h2 class="btn btn-lg btn-light">View Customer Benefits</h2>
+                    </a>
                     <a target="_blank" href="https://sddtu.typeform.com/to/uTW7eU" class="btn btn-lg btn-dark">Submit Your Query</a>
                     <a target="_blank" href="./files/Brochure.pdf" class="btn btn-lg btn-light">Download Our Brochure</a>
                 </div>
