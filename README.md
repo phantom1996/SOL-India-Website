@@ -1,2 +1,2 @@
-#SOL India Website
-Website Designed for SOL India
+#SOL- Solar Optimization Line- Website
+Website Designed for SOL, a solar tech based startup.
