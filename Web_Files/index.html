@@ -13,43 +13,53 @@
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:400,500,700">
     <link rel="stylesheet" href="http://livedemo00.template-help.com/wt_58950/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/socialbuttons.css">
+    <style type="text/css">
+      .rd-navbar-fixed .rd-navbar-brand .brand-name::before{
+        content: 'SOL India';
+        position: absolute;
+        top: 0;
+        font-weight: 400;
+      }
+    </style>
     <!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
     <![endif]-->
   </head>
   <body>
+  <!-- Social Icons -->
+  <ul id="social_side_links">
+    <li><a style="background-color: #3c5a96;" href="http://facebook.com" target="_blank"><img src="images/facebook-icon.png" alt="" /></a></li>
+    <li><a style="background-color: #1dadeb;" href="http://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="" /></a></li>
+    <li><a style="background-color: #1178b3;" href="http://linkedin.com" target="_blank"><img src="images/linkedin-icon.png" alt="" /></a></li>
+    <li><a style="background-color: #E0F2F1;" href="contacts.html"><img src="images/contact-phone-icon.png" alt=""/></a></li>
+    <li><a style="background-color: #3c6a92;" href="contacts.html"><img src="images/mail.png" alt=""/></a></li>
+  </ul>
+
     <!-- Page-->
     <div class="page text-center">
       <!-- Page Header-->
       <header class="page-head">
         <!-- RD Navbar-->
         <div class="rd-navbar-wrap rd-navbar-absolute">
-          <nav data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-sm-stick-up-offset="50px" data-lg-stick-up-offset="150px" class="rd-navbar rd-navbar-background-before">
+          <nav data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-sm-stick-up-offset="0px" data-lg-stick-up-offset="0px" class="rd-navbar rd-navbar-background-before">
             <div class="rd-navbar-inner">
               <div class="rd-navbar-inner-wrap">
                 <!-- RD Navbar Panel-->
                 <div class="rd-navbar-panel">
                   <!-- RD Navbar Toggle-->
                   <button data-rd-navbar-toggle=".rd-navbar-nav-wrap" class="rd-navbar-toggle"><span></span></button>
-                  <button data-rd-navbar-toggle=".rd-navbar-search-fixed-wrap" class="rd-navbar-search-toggle"><span></span></button>
                   <button data-rd-navbar-toggle=".rd-navbar-panel-right" class="rd-navbar-panel-right-toggle"><span></span></button>
+                  <div class="rd-navbar-brand"><a href="index.html" class="brand-name"></a></div>
                   <!-- RD Navbar Brand-->
                   <!-- TODO: Redesign Logo, for every file -->
-                  <div class="rd-navbar-brand"><a href="index.html"><img height="100%" width="100%" src='images/logo-light.png' alt=''/></a></div>
-                  <div class="rd-navbar-search-fixed-wrap">
-                    <!-- RD Search-->
-                    <form action="search-results.html" method="GET" data-search-live="rd-search-fixed-results-live" class="rd-search rd-search-results-navbar">
-                      <div class="form-group">
-                        <input type="text" name="s" autocomplete="off" class="form-control"/>
-                      </div>
-                      <div id="rd-search-fixed-results-live" class="rd-search-results-live"></div>
-                    </form>
-                  </div>
+                  <!-- Missed logo -->
                 </div>
                 <div class="rd-navbar-nav-wrap">
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
+                    <li><a href="index.html"><img height="30" width="150" src='images/logo-light.png' alt=''/></a></li>
                     <li><a href="about.html">About</a>
                       <!-- RD Navbar Dropdown-->
                       <ul class="rd-navbar-dropdown">
@@ -126,17 +136,6 @@
                     </li>
                     <li><a href="contacts.html">Contact Us</a></li>
                   </ul>
-                </div>
-                <div class="rd-navbar-panel-right-wrap">
-                  <div class="rd-navbar-panel-right text-lg-right">
-                    <address class="contact-info extra-small"><a href="callto:+919868831600"><span class="icon mdi material-icons-local_phone inset-right-4 text-middle"></span><span class="text-medium">+91 9868831600 </span></a></address>
-                    <ul class="list list-inline list-inline-0 list-warning-darken extra-small">
-                      <li><a href="index.html#" class="text-warning"><span class="icon fa fa-facebook"></span></a></li>
-                      <li><a href="index.html#" class="text-warning"><span class="icon fa fa-google-plus"></span></a></li>
-                      <li><a href="index.html#" class="text-warning"><span class="icon fa fa-linkedin"></span></a></li>
-                      <li><a href="index.html#" class="text-warning"><span class="icon fa fa-twitter"></span></a></li>
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>
@@ -453,7 +452,7 @@
       <footer class="page-footer bg-botticelli section-80 section-sm-100">
         <div class="shell">
           <div class="range range-xs-center">
-            <div class="cell-xs-5 cell-sm-3 cell-md-2 cell-lg-2 cell-lg-push-1 text-xs-left"><a href="index.html"><img width='102' height='63' src='images/logo-dark.png' alt=''/></a>
+            <div class="cell-xs-5 cell-sm-3 cell-md-2 cell-lg-2 cell-lg-push-1 text-xs-left"><a href="index.html"><img width='150' height='50' src='images/logo-dark.png' alt=''/></a>
               <div class="reveal-block text-lg-left inset-left-30">
                 <div class="extra-small offset-top-4 text-bold text-darker">&copy; <span id="copyright-year"></span></div>
                 <p class="text-bold"><a href="privacy.html" class="extra-small text-darker">Privacy Policy</a></p>
