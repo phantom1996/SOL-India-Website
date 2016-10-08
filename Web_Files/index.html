@@ -22,6 +22,18 @@
         font-weight: 400;
       }
     </style>
+    <style type="text/css">
+      .rd-navbar-static .rd-navbar-nav > li > .rd-navbar-dropdown, .rd-navbar-fullwidth .rd-navbar-nav > li > .rd-navbar-dropdown{
+        background: rgba(101, 149, 186, 0.90);
+        border: 1px solid black;
+        border-radius: 25px;
+      }
+      ul.rd-navbar-dropdown{
+        background: rgba(101, 149, 186, 0.90);
+        border: 1px solid black;
+        border-radius: 25px;
+      }
+    </style>
     <!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
@@ -36,7 +48,6 @@
     <li><a style="background-color: #E0F2F1;" href="contacts.html"><img src="images/contact-phone-icon.png" alt=""/></a></li>
     <li><a style="background-color: #3c6a92;" href="contacts.html"><img src="images/mail.png" alt=""/></a></li>
   </ul>
-
     <!-- Page-->
     <div class="page text-center">
       <!-- Page Header-->
@@ -60,80 +71,38 @@
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
                     <li><a href="index.html"><img height="30" width="150" src='images/logo-light.png' alt=''/></a></li>
-                    <li><a href="about.html">About</a>
+                    <li><a href="index.html#">About</a>
                       <!-- RD Navbar Dropdown-->
                       <ul class="rd-navbar-dropdown">
                     <!--     <li><a href="who-we-are.html">Who we are</a></li>
                         <li><a href="what-we-do.html">What we do</a></li> -->
-                        <li><a href="our-team.html">Our team</a></li>
-                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="why-choose-our-system.html">Why Choose Us?</a></li>
+                        <li><a href="our-team.html">Our team</a></li>                  
+                        <!-- <li><a href="careers.html">Careers</a></li> -->
                       </ul>
                     </li>
-      
-                    <li><a href="index.html#">Explore</a>
-                      <!-- RD Navbar Megamenu-->
-                      <ul class="rd-navbar-megamenu">
-                        <li>
-                          <ul>
-                            <li><a href="about-solar.html" class="text-bold text-white">Why Solar?</a></li>
-                            <li><!-- <a href="residential.html" class="text-bold text-white">Residential</a> -->
-                              <!-- Bootstrap Accordion-->
-                              <div id="accordion-1" role="tablist" aria-multiselectable="true" class="panel-group accordion accordion-custom offset-top-14">
-                                <div id="headingOne" role="tab">
-                                  <div class="heading-wrap"><a>Residential</a><span role="button" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne" aria-expanded="true" class="icon icon-xxs mdi material-icons-expand_more collapsed"></span></div>
-                                  <div id="collapseOne" role="tabpanel" aria-labelledby="headingOne" class="panel-collapse collapse">
-                                    <ul>
-                                      <li><a href="compare-plans-offers.html" class="text-white">Compare Plans & Offers</a></li>
-                                      <li><a href="find-the-right-system.html" class="text-white">Find the Right System</a></li>
-                                      <li><a href="estimate-your-solar-savings.html" class="text-white">Estimate Your Solar Savings</a></li>
-                                      <!-- <li><a href="solar-service.html" class="text-white">Solar as a service</a></li> -->
-                                      <!-- <li><a href="purchase-solar-online.html" class="text-white">Purchase Solar Online</a></li> -->
-                                      <!-- <li><a href="solar-service-how-it-work.html" class="text-white">Solar as a service - How does it work?</a></li> -->
-                                    </ul>
-                                  </div>
-                                </div>
-                                <div id="headingThree" role="tab" class="offset-top-14">
-                                  <div class="heading-wrap"><a href="commercial-government.html">Commercial & Government</a><span role="button" data-toggle="collapse" data-parent="#accordion-1" href="#collapseThree" aria-expanded="true" class="icon icon-xxs mdi material-icons-expand_more collapsed"></span></div>
-                                  <div id="collapseThree" role="tabpanel" aria-labelledby="headingThree" class="panel-collapse collapse">
-                                    <ul>
-                                      <li><a href="solar-business-solutions.html" class="text-white">Solar Business Solutions</a></li>
-                                      <!-- <li><a href="rebates-and-tax-incentives.html" class="text-white">Rebates and tax incentives</a></li> -->
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <li><a href="get-quote.html" class="text-white">Get a Quote</a></li>
-                          </ul>
 
-                        </li>
-                        <li>
-                          <ul>
-                            <li><a href="why-choose-our-system.html" class="text-white">Why Choose Us ?</a></li>
-                            <li><a href="reports-presentations.html" class="text-white">Reports & Presentations</a></li>
-                            <li><a href="clients.html" class="text-bold text-white">Our Clients</a></li>
-                            <li><a href="case.html" class="text-white">Our Projects</a></li>
+                    <li><a href="index.html#">Offerings</a>
+                      <!-- RD Navbar Dropdown-->
+                      <ul class="rd-navbar-dropdown">
+                    <!--     <li><a href="who-we-are.html">Who we are</a></li>
+                        <li><a href="what-we-do.html">What we do</a></li> -->
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a>
+                          <ul class="rd-navbar-dropdown" style="padding-left: 25px; padding-right: 25px; padding-top: 25px;padding-bottom: 25px;">
+                            <li><a href="solar-epc-services.html">Utility Scale</a></li>
+                            <li><a href="solar-epc-services.html">Commercial &amp; Industrial</a></li>
+                            <li><a href="solar-epc-services.html">Residential/<br>Rooftop</a></li>
+                            <li><a href="consultancy-services.html">Services</a></li>
                           </ul>
-                        </li>
+                        </li>                  
+                        <!-- <li><a href="careers.html">Careers</a></li> -->
                       </ul>
                     </li>
-                    <li><a href="products.html">Products</a>
-                      <!-- RD Navbar Dropdown-->
-                      <ul class="rd-navbar-dropdown">
-                        <li><a href="products.html">Conventional Products</a></li>
-                        <li><a href="single-product.html">SOL Products</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="./services.html">Services</a>
-                      <!-- RD Navbar Dropdown-->
-                      <ul class="rd-navbar-dropdown">
-                        <!-- <li><a href="./services.html">All Services</a></li> -->
-                        <li><a href="solar-epc-services.html">Solar EPC</a></li>
-                        <li><a href="consultancy-services.html">Consultancy</a></li>             
-                      </ul>
-                    </li>
-                    <li><a href="blog.html">Blog</a>
-                    </li>
+
+                    <!-- <li><a href="blog.html">Blog</a>
+                    </li> -->
+                    <li><a href="case.html">Projects</a></li>
                     <li><a href="contacts.html">Contact Us</a></li>
                   </ul>
                 </div>
@@ -479,11 +448,9 @@
             </div>
             <div class="cell-xs-8 cell-sm-6 cell-md-6 cell-lg-2 cell-lg-push-4 text-xs-left offset-top-42 offset-xs-top-30 offset-sm-top-17 offset-lg-top-0">
               <ul class="list list-unstyled text-spacing-100 extra-small">
-                <li class="reveal-xs-inline-block reveal-lg-block inset-xs-left-10 inset-lg-left-0"><a href="about.html" class="text-uppercase text-bold">About</a></li>
-                <li class="reveal-xs-inline-block reveal-lg-block inset-xs-left-10 inset-lg-left-0 offset-top-17"><a href="residential.html" class="text-uppercase text-bold">Explore</a></li>
-                <li class="reveal-xs-inline-block reveal-lg-block inset-xs-left-10 inset-lg-left-0 offset-top-17"><a href="products.html" class="text-uppercase text-bold">products</a></li>
-                <li class="reveal-xs-inline-block reveal-lg-block inset-xs-left-10 inset-lg-left-0 offset-top-17"><a href="services.html" class="text-uppercase text-bold">Services</a></li>
-                <li class="reveal-xs-inline-block reveal-lg-block inset-xs-left-10 inset-lg-left-0 offset-top-17"><a href="blog.html" class="text-uppercase text-bold">Blog</a></li>
+                <li class="reveal-xs-inline-block reveal-lg-block inset-xs-left-10 inset-lg-left-0"><a href="why-choose-our-system.html" class="text-uppercase text-bold">Why Choose Us?</a></li>
+                <li class="reveal-xs-inline-block reveal-lg-block inset-xs-left-10 inset-lg-left-0 offset-top-17"><a href="case.html" class="text-uppercase text-bold">Projects</a></li>
+                <li class="reveal-xs-inline-block reveal-lg-block inset-xs-left-10 inset-lg-left-0 offset-top-17"><a href="brochures-technical-info.html" class="text-uppercase text-bold">Brochures &amp; Technical Info</a></li>
                 <li class="reveal-xs-inline-block reveal-lg-block inset-xs-left-10 inset-lg-left-0 offset-top-17"><a href="contacts.html" class="text-uppercase text-bold">Contact Us</a></li>
               </ul>
             </div>
