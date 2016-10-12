@@ -1,0 +1,72 @@
+.modalDialog {
+	position: fixed;
+	font-family: "Roboto";
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.6);
+	z-index: 99999;
+	opacity:0;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	font-family: 'Roboto', sans-serif;
+	width: 45%;
+	position: relative;
+	margin: 10% auto;
+	text-align: center;
+	padding: 20px;
+	border-radius: 10px;
+	background-image: url("../images/backgrounds/background-13-1920x900.jpg");
+    background-color: #e8e8e8;
+}	
+.close {
+	background: #46e7ea;
+	color: grey;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	opacity: 60;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 12px;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #00d9ff; }
+
+input[type="button"]{
+	background: #c1c1bb;
+	width: relative;
+	height: 3em;
+	font-size: 17px;
+	border-radius: 3px;
+	outline: black;
+	border:black;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+input[type="number"]{
+	margin-top: 5%;
+	margin-bottom: 5%;
+	width: 500px;
+	height: 3em;
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: 17px;
+	border-radius: 3px;
+	outline: none;
+	border:none;
+	font-family: 'Roboto', sans-serif;
+}
+
+.active{
+	background: #42f495 !important;
+}

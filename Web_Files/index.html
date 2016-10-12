@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:400,500,700">
     <link rel="stylesheet" href="http://livedemo00.template-help.com/wt_58950/css/style.css">
     <link rel="stylesheet" type="text/css" href="css/socialbuttons.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <style type="text/css">
       .rd-navbar-fixed .rd-navbar-brand .brand-name::before{
         content: 'SOL India';
@@ -123,7 +124,8 @@
                       <div class="cell-sm-10 cell-lg-6">
                         <h1 class="offset-lg-top-34 offset-xl-top-0"><span class="text-uppercase text-spacing-50">If you are</span></h1>
                         <h4 class="text-regular text-uppercase offset-top-20 offset-md-top-34 text-spacing-75">Among These, <br class="veil reveal-lg-inline-block"> Then, You Need Us!</h4>
-                        <div class="group-lg offset-top-34"><a href="estimate-your-solar-savings.html" class="btn btn-calculate btn-default h4 text-uppercase text-spacing-150">Calculate My Savings</a><a href="get-quote-form.html" class="btn btn-icon btn-icon-right btn-zip-code btn-default text-spacing-25"><span class="icon icon-rotate mdi mdi-keyboard-backspace"></span>Get A Quote</a></div>
+                        <!-- TODO: Update this with new modal-->
+                        <div class="group-lg offset-top-34"><a href="#openModal" class="btn btn-calculate btn-default h4 text-uppercase text-spacing-150 open">Calculate My Savings</a><a href="get-quote-form.html" class="btn btn-icon btn-icon-right btn-zip-code btn-default text-spacing-25"><span class="icon icon-rotate mdi mdi-keyboard-backspace"></span>Get A Quote</a></div>
                         <p class="veil reveal-sm-block veil-lg reveal-xl-block text-spacing-50 offset-top-20 offset-md-top-42 inset-lg-right-105">Our free, no obligation, solar installation quotes are provided by the top solar installers</p>
                       </div>
                     </div>
@@ -417,6 +419,22 @@
           </div>
         </section>
       </main>
+      <div id="openModal" class="modalDialog">
+        <div>
+          <a href="#close" title="Close" class="close">x</a>
+          <div>
+            <input type="button" value = "Input Rooftop Area (in sq. m)" style="margin-right: 2.5%" class="active"></input>
+            <input type="button" value = "Input Load (in kWh)" style="margin-left: 2.5%"></input>
+          </div>
+          <br>
+          <div>
+          <input type="number" id="data"></input>
+          </div>
+          <div class="output" style="color: white;"> You have a potential to generate 0 kWh Energy!</div>
+        </div>
+      </div>
+      <script src="js/jquery.js"></script>
+      <script src="js/calcscript.js" ></script>
       <!-- Page Footer-->
       <footer class="page-footer bg-botticelli section-80 section-sm-100">
         <div class="shell">
