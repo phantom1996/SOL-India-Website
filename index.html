@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>SOL India</title>
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/jquery.modal.css" rel="stylesheet">
+    
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/logo.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <style type="text/css">
+        .img-responsive{
+            border-radius: 5%;
+        }
+    </style>
+    <script type="text/javascript">
+        function auditFn(){
+            document.getElementById("audit").style.visibility="visible";
+            document.getElementById("audit").style.display="inline";
+            document.getElementById("design").style.display="none";
+            document.getElementById("approval").style.display="none";
+            document.getElementById("supply").style.display="none";
+            document.getElementById("installation").style.display="none";
+            document.getElementById("operation").style.display="none";
+            
+            document.getElementById("auditIcon").style.color="#30D2DE";
+            document.getElementById("designIcon").style.color="white";
+            document.getElementById("approvalIcon").style.color="white";
+            document.getElementById("supplyIcon").style.color="white";
+            document.getElementById("installationIcon").style.color="white";
+            document.getElementById("operationIcon").style.color="white";
+        }
+        function designFn(){
+            document.getElementById("audit").style.display="none";
+            document.getElementById("design").style.display="inline";
+            document.getElementById("approval").style.display="none";
+            document.getElementById("supply").style.display="none";
+            document.getElementById("installation").style.display="none";
+            document.getElementById("operation").style.display="none";
+            
+            document.getElementById("auditIcon").style.color="white";
+            document.getElementById("designIcon").style.color="#30D2DE";
+            document.getElementById("approvalIcon").style.color="white";
+            document.getElementById("supplyIcon").style.color="white";
+            document.getElementById("installationIcon").style.color="white";
+            document.getElementById("operationIcon").style.color="white";
+        }
+        function approvalFn(){
+            document.getElementById("audit").style.display="none";
+            document.getElementById("design").style.display="none";
+            document.getElementById("approval").style.display="inline";
+            document.getElementById("supply").style.display="none";
+            document.getElementById("installation").style.display="none";
+            document.getElementById("operation").style.display="none";
+            
+            document.getElementById("auditIcon").style.color="white";
+            document.getElementById("designIcon").style.color="white";
+            document.getElementById("approvalIcon").style.color="#30D2DE";
+            document.getElementById("supplyIcon").style.color="white";
+            document.getElementById("installationIcon").style.color="white";
+            document.getElementById("operationIcon").style.color="white";
+        }
+        function supplyFn(){
+            document.getElementById("audit").style.display="none";
+            document.getElementById("design").style.display="none";
+            document.getElementById("approval").style.display="none";
+            document.getElementById("supply").style.display="inline";
+            document.getElementById("installation").style.display="none";
+            document.getElementById("operation").style.display="none";
+            
+            document.getElementById("auditIcon").style.color="white";
+            document.getElementById("designIcon").style.color="white";
+            document.getElementById("approvalIcon").style.color="white";
+            document.getElementById("supplyIcon").style.color="#30D2DE";
+            document.getElementById("installationIcon").style.color="white";
+            document.getElementById("operationIcon").style.color="white";
+        }
+        function installationFn(){
+            document.getElementById("audit").style.display="none";
+            document.getElementById("design").style.display="none";
+            document.getElementById("approval").style.display="none";
+            document.getElementById("supply").style.display="none";
+            document.getElementById("installation").style.display="inline";
+            document.getElementById("operation").style.display="none";
+            
+            document.getElementById("auditIcon").style.color="white";
+            document.getElementById("designIcon").style.color="white";
+            document.getElementById("approvalIcon").style.color="white";
+            document.getElementById("supplyIcon").style.color="white";
+            document.getElementById("installationIcon").style.color="#30D2DE";
+            document.getElementById("operationIcon").style.color="white";
+        }
+        function operationFn(){
+            document.getElementById("audit").style.display="none";
+            document.getElementById("design").style.display="none";
+            document.getElementById("approval").style.display="none";
+            document.getElementById("supply").style.display="none";
+            document.getElementById("installation").style.display="none";
+            document.getElementById("operation").style.display="inline";
+            
+            document.getElementById("auditIcon").style.color="white";
+            document.getElementById("designIcon").style.color="white";
+            document.getElementById("approvalIcon").style.color="white";
+            document.getElementById("supplyIcon").style.color="white";
+            document.getElementById("installationIcon").style.color="white";
+            document.getElementById("operationIcon").style.color="#30D2DE";
+        }
+    </script>
+</head><!--/head-->
+
+<body id="home" class="homepage">
+
+    <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-left">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#main-slider"><img src="images/logo.png" style="width:200px; height: 30px; margin-left: -80px; margin-right: 30px;"></a></li>
+                        <li class="scroll"><a href="#about">Overview</a></li>
+                        <li class="scroll"><a href="#work-process">Work Process</a></li>
+                        <li class="scroll"><a href="#">Products &amp; Services</a></li>
+                        <li class="scroll"><a href="#">Projects</a></li>
+                        <li class="scroll"><a href="#">Team</a></li>
+                        <li class="scroll"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section id="main-slider">
+        <div class="owl-carousel">
+
+            <div class="item" style="background-image: url(images/background-01.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row" style="margin: 20px;">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2 style="text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;">clean, safe &amp; renewable,<br> <span>so why not?</span></h2>
+                                    <p>174 petawatts of free energy!</p>
+                                    <a class="btn btn-primary btn-lg" href="#">Learn how much you can harvest</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+
+            <div class="item" style="background-image: url(images/background-02.jpg);">
+            </div><!--/.item-->
+
+            <div class="item" style="background-image: url(images/solar1.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row" style="margin: 20px;">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2 style="text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;">solar energy, the smart way to <span>power</span> your needs</h2>
+                                    <a class="btn btn-primary btn-lg" href="#why-solar">Ever wondered, why solar?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+
+            <div class="item" style="background-image: url(images/solar-panel-power.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row" style="margin: 20px;">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2 style="text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;">let the sun do the work!</h2>
+                                    <a class="btn btn-primary btn-lg" href="#work-process">See our solar value chain</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+
+        </div><!--/.owl-carousel-->
+    </section><!--/#main-slider-->
+
+    <section id="about" style=" background-image :url('images/sunrise.jpg');">
+        <div class="container">
+
+            <div class="section-header" style="color: white;">
+                <br>
+                <h2 class="section-title text-center wow fadeInDown" style="text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 1.5px 0 #000, -1.5px 0 0 #000; color: white">OVERVIEW ABOUT SOL</h2>
+                <p class="text-center wow fadeInDown"><br>SOL India is an integrated solar solution provider brought together by a bunch of engineers and marketing professionals from the best institutes of the country. Our sole vision is to leverage the most sustainable energy on the planet and help enable solar power at every corner at the most efficient costs. We aim to deliver clean energy to everyone possible so we do our bit in making the world a better place to live. Now with advanced technologies over the years, its now much more affordable and efficient to make the switch.<br></p>
+                <p class="text-center wow fadeInDown"><br>
+                Just brief us with your requirements and we will prepare a plan of action suitable to your needs. Our experienced team of professionals will take care of the rest - site planning, installations and maintenance. Its as easy as that.<br>
+                <br><a class="btn btn-primary btn-lg" style= "margin-top: 1em;" href="#work-process">Explore Our Work Process</a></p>
+            </div>
+
+            <div class="row">
+                </div>
+            </div>
+        </div>
+    </section><!--/#about-->
+
+    <section id="why-solar" style="background-color: #BCE5EB; padding: 100px 0px 75px;">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">why solar?</h2>
+                <p class="text-center wow fadeInDown">Solar Energy, Clean Energy for a better tomorrow.</p>
+            </div>
+
+            <div class="row">
+                <div class="features">
+                    <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-4x fa-desktop text-primary sr-icons"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Help save the world</h4>
+                                <p style="text-align:justify;">The environmental impact of non-renewable energy is endangering to the living health on the planet. Lucky for humankind, every hour the sun beams onto Earth enough energy to satisfy global energy needs for an entire year*. The solution is right in front of our eyes and with advanced technologies its now more affordable and efficient to harvest solar power. </p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-4x fa-code-fork text-primary sr-icons"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">How does it affect me?</h4>
+                                <p style="text-align:justify;">Investing in solar power today will lock your energy costs for years to come. You can save a major chunk on your energy bills and even feed back the excess to use it on the days with low solar supply. Make the most out of government benefits in the form of subsidies and tax benefits when you invest in solar power and add more to your annual savings. </p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">What can you do as a corporate?</h4>
+                                <p style="text-align:justify;">As a corporate, you have an added responsibility towards the environment, you can help reduce you carbon footprints by making the switch and making your office spaces Zero Energy buildings. You can also add more stars to your Corporate social responsibility initiatives when you invest in solar power and help bring many household a sustainable form of energy.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-bar-chart"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Why choose us?</h4>
+                                <p style="text-align:justify;">Our time-tested approach provides outstanding customer experiences, keeping you well ahead of the energy curve for the next 30 years and beyond. Our six stage working process ensures the you get best possible service coupled with lates technologies. Our customers enjoy the sunny side of their electric bill!</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#why-solar-->
+
+        <section id="work-process" style="background: url('images/solarchain1.jpg');">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown" style="text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; color: white">SOLAR VALUE CHAIN</h2>
+                <p class="text-center wow fadeInDown" style="font-size: 1.2em;">Our time-tested approach provides outstanding customer experiences, keeping you well ahead of the energy curve for next 30 years and beyond.</p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div class="icon-circle" onmouseover="auditFn();">
+                            <span>1</span>
+                            <i id="auditIcon" class="fa fa-thumb-tack fa-2x"></i>
+                        </div>
+                        <h3 style="text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; color: white">Site Audit</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                        <div class="icon-circle" onmouseover="designFn();">
+                            <span>2</span>
+                            <i id="designIcon" class="fa fa-file-text-o fa-2x"></i>
+                        </div>
+                        <h3 style="text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; color: white">System Design &amp; Proposal</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <div class="icon-circle" onmouseover="approvalFn();">
+                            <span>3</span>
+                            <i id="approvalIcon" class="fa fa-legal fa-2x"></i>
+                        </div>
+                        <h3 style="text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; color: white">Approval &amp; Permiting</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                        <div class="icon-circle" onmouseover="supplyFn();">
+                            <span>4</span>
+                            <i id="supplyIcon" class="fa fa-truck fa-2x"></i>
+                        </div> 
+                        <h3 style="text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; color: white">Procurement &amp; Supply</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="400ms">
+                        <div class="icon-circle" onmouseover="installationFn();">
+                            <span>5</span>
+                            <i id="installationIcon" class="fa fa-space-shuttle fa-2x"></i>
+                        </div>
+                        <h3 style="text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; color: white">Installation &amp; Comissioning</h3>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms">
+                        <div class="icon-circle" onmouseover="operationFn();">
+                            <span>6</span>
+                            <i id="operationIcon" class="fa fa-bolt fa-2x"></i>
+                        </div>
+                        <h3 style="text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; color: white">Operation &amp; Maintenance</h3>
+                    </div>
+                </div>
+            </div>
+            <div style="padding:25px;">
+                <div class="row" style="text-align: center; font-size: 1.4em; line-height: 1.5em; display: inline; visibility: hidden;" id="audit">
+                <ul type="disc">
+                    <div class="col-xs-6">
+                        <li>Feasibility Study</li>
+                        <li>Yield Assessment</li>
+                    </div>
+                    <div class="col-xs-6">
+                        <li>Site Survey</li>
+                        <li>Load Analysis</li>
+                    </div>
+                </ul>
+                </div>
+                <div class="row" style="text-align: center; font-size: 1.4em; line-height: 1.5em; display: none;" id="design">
+                <ul type="disc">
+                    <div class="col-xs-6">
+                        <li>Cost Estimation</li>
+                        <li>Civil &amp; Electrical Design</li>
+                    </div>
+                    <div class="col-xs-6">
+                        <li>Present Proposal</li>
+                        <li>Sign Exclusive Agreement</li>
+                    </div>
+                </ul>
+                </div>
+                <div class="row" style="text-align: center; font-size: 1.4em; line-height: 1.5em; display: none;" id="approval">
+                <ul type="disc">
+                    <div class="col-xs-6">
+                        <li>Regulatory Compliance</li>
+                        <li>Net Metering</li>
+                    </div>
+                    <div class="col-xs-6">
+                        <li>Clearance</li>
+                        <li>Approvals</li>
+                    </div>
+                </ul>
+                </div>
+                <div class="row" style="text-align: center; font-size: 1.4em; line-height: 1.5em; display: none;" id="supply">
+                <ul type="disc">
+                    <div class="col-xs-6">
+                        <li>Vendor Selection</li>
+                        <li>Purchasing Components</li>
+                    </div>
+                    <div class="col-xs-6">
+                        <li>Logistics Planning &amp; Coordination</li>
+                        <li>Mounting Structure</li>
+                    </div>
+                </ul>
+                </div>
+                <div class="row" style="text-align: center; font-size: 1.4em; line-height: 1.5em; display: none;" id="installation">
+                <ul type="disc">
+                    <div class="col-xs-6">
+                        <li>Project Management</li>
+                        <li>Quality Control</li>
+                    </div>
+                    <div class="col-xs-6">
+                        <li>Planning &amp; Scheduling</li>
+                        <li>Installations</li>
+                    </div>
+                </ul>
+                </div>
+                <div class="row" style="text-align: center; font-size: 1.4em; line-height: 1.5em; display: none;" id="operation">
+                <ul type="disc">
+                    <div class="col-xs-6">
+                        <li>Annual Maintenance Contract</li>
+                        <li>Parts Replacement</li>
+                    </div>
+                    <div class="col-xs-6">
+                        <li>Safety &amp; Security</li>
+                        <li>Regular Checkups</li>
+                    </div>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </section><!--/#work-process-->
+
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2016, SOL India
+                </div>
+                <div class="col-sm-6">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-2x fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-2x fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-2x fa-twitter"></i></a></li>
+                        <li> <i class="fa fa-2x fa-phone sr-contact"></i> +91 9868831600</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/jquery.modal.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
