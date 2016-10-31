@@ -223,7 +223,7 @@ ul.nostyle i {
   overflow: hidden;
 }
 #main-slider .item {
-  height: 558px;
+  height: 600px;
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -542,6 +542,9 @@ ul.nostyle i {
   background-size: cover;
   color: #fff;
 }
+#work-process .section-header {
+  margin-bottom: 30px;
+}
 #work-process h2 {
   color: #fff;
 }
@@ -549,18 +552,21 @@ ul.nostyle i {
   color: #fff;
   margin-bottom: 0;
 }
-#work-process .icon-circle {
+#work-process h3 {
+  margin-bottom: 50px;
+}
+#why-solar .icon-circle {
   display: inline-block;
-  width: 80px;
-  height: 80px;
+  width: 180px;
+  height: 180px;
   line-height: 80px;
-  border: 2px solid #45aed6;
+  border: 4px solid #45aed6;
   border-radius: 100px;
   position: relative;
 }
-#work-process .icon-circle > span {
+#why-solar .icon-circle > span {
   border-style: solid;
-  border-width: 2px;
+  border-width: 8px;
   border-color: #45aed6;
   border-radius: 50%;
   background-color: #fff;
@@ -570,9 +576,6 @@ ul.nostyle i {
   line-height: 20px;
   top: -12px;
   color: #64686d;
-}
-#work-process h3 {
-  margin-bottom: 50px;
 }
 #meet-team {
   padding: 100px 0;
