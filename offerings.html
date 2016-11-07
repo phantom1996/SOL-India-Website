@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Offerings|SOL India</title>
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/jquery.modal.css" rel="stylesheet">
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Chartjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+    
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/logo.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <script>        
+        var barDataArray = [10000,4800];
+        var lineDataArray = [-444000, 0, 444000, 880000, 1320000, 1760000];
+        var pieDataArray = [550,450];
+        var doughnutDataArray = [62,48];
+        function onformsubmit(){
+            var form = document.getElementById("solar-calculator-form");
+            var bill = form.elements.namedItem("monthlyBill").value;
+            var load = form.elements.namedItem("load").value;
+            var area = form.elements.namedItem("area").value;
+            var type = form.elements.namedItem("connectionType").value;
+            /*Value changes for barDataArray*/
+            barDataArray[0]=bill;
+            barDataArray[1]=bill*0.48;
+
+            /*Value changes for lineDataArray*/
+            lineDataArray[0]=-1*load*90000;
+            lineDataArray[1]=lineDataArray[0]+(-1*lineDataArray[0]);
+            lineDataArray[2]=lineDataArray[1]+(-1*lineDataArray[0]);
+            lineDataArray[3]=lineDataArray[2]+(-1*lineDataArray[0]);
+            lineDataArray[4]=lineDataArray[3]+(-1*lineDataArray[0]);
+            lineDataArray[5]=lineDataArray[4]+(-1*lineDataArray[0]);
+
+            /*Value changes for pieDataArray*/
+            pieDataArray[1]=load*43;
+            pieDataArray[0]=area-pieDataArray[1];
+            if(pieDataArray[0]<0) pieDataArray[0]=0;
+
+            /*Value changes for doughnutDataArray*/
+
+            /* Value change for system cost*/
+            document.getElementById("system-cost").innerHTML=-1*lineDataArray[0];
+
+            myBarChart.update();
+            myLineChart.update();
+            myPieChart.update();
+            myDoughnutChart.update();
+
+            return false;
+        }
+    </script>
+
+</head><!--/head-->
+
+<body id="home" class="homepage">
+
+    <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-left">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html"><img src="images/logo.png" style="width:200px; height: 30px; margin-left: -20px; margin-right: 30px;"></a></li>
+                        <li class="scroll"><a href="index.html#about">Overview</a></li>
+                        <li class="scroll"><a href="#">Offerings</a></li>
+                        <li class="scroll"><a href="#">Projects</a></li>
+                        <li class="scroll"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <div style="padding: 4em; padding-top: 5em; background: url(images/texture.jpg);">
+    <form id="solar-calculator-form" onsubmit="return onformsubmit()">
+        <div class="row">
+          <h1 style="text-align: center; margin-bottom: 40px; margin-top: -15px; color: #428bca;">Get A Quote Now</h1>
+          <div class="col-md-2 col-md-offset-1">
+            <div class="form-group">
+              <label for="">Monthly Bill</label>
+              <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-rupee"></i> </div>
+                <input type="number" value="10000" name="monthlyBill" autocomplete="off"
+                class="form-control " id="monthlyBill1" placeholder="Total Amount" required >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="">Connected Load</label>
+              <div class="input-group">
+                <input type="number" class="form-control" value="5"
+                name="load" autocomplete="off" id="load1" placeholder="As per your bill" required>
+                <div class="input-group-addon">KW </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="">Available Area</label>
+              <div class="input-group">
+                <input type="number" value="1000" class="form-control" id="area1"
+                name="area" autocomplete="off" placeholder="Total Area" required>
+                <div class="input-group-addon">Sq.Ft.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div class="form-group">
+              <label for="">Connection Type &nbsp;&nbsp;&nbsp;</label>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-info active">
+                  <input type="radio" name="connectionType" class="connectionType1" id="option1" value="residential"
+                  checked>Residential
+                </label>
+                <label class="btn btn-info">
+                  <input type="radio" name="connectionType" class="connectionType1" id="option2" value="industrial"
+                  >Industrial
+                </label>
+                <label class="btn btn-info">
+                  <input type="radio" name="connectionType" class="connectionType1" id="option3" value="commercial"
+                  >Commercial
+                </label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="row" style="margin-top: 40px;">
+          <div class="col-md-offset-4 col-md-4">
+            <input class="btn btn-primary btn-block" type="submit" value="Calculate My Savings"/>
+          </div>
+        </div>
+    </form>
+    </div>
+
+    <div id="graphs">
+        <div class="row" style="padding: 4em;">
+            <div class="col-md-4" style="text-align: center;">
+                <canvas id="barChart" height="250px"></canvas>
+                <script>
+                    var ctx = document.getElementById("barChart");
+                    var myBarChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ["Before", "After"],
+                        datasets: [{
+                            label: 'Monthly Bill',
+                            data: barDataArray,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true
+                                }
+                            }]
+                        }
+                    }
+                });
+                </script>
+            </div>
+            <div class="col-md-4" style="text-align: center;">
+                <h1 style="color: #4A6D8B; font-size: 3.5em;">System Cost</h1>
+                <h2 style="color: #4A6D8B; font-size: 3.5em;">
+                <i class="fa fa-3x fa-rupee"></i><span id="system-cost">450000</span>
+                </h2>
+            </div>
+            <div class="col-md-4" style="text-align: center;">
+                <canvas id="lineChart" height="250px"></canvas>
+                <script>
+                var data = {
+                    labels: ["2017", "2022", "2027", "2032", "2037", "2042"],
+                    datasets: [{
+                        label: "BreakEven Period",
+                        fill: false,
+                        lineTension: 0.1,
+                        backgroundColor: "rgba(75,192,192,0.4)",
+                        borderColor: "rgba(75,192,192,1)",
+                        borderCapStyle: 'butt',
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "rgba(75,192,192,1)",
+                        pointBackgroundColor: "rgba(75,192,192,1)",
+                        pointBorderWidth: 1,
+                        pointHoverRadius: 6,
+                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 2,
+                        pointRadius: 3,
+                        pointHitRadius: 10,
+                        data: lineDataArray,
+                        spanGaps: false,
+                    }]
+                };              
+                var ctx= document.getElementById("lineChart");
+                var myLineChart = new Chart(ctx, {
+                    type: 'line',
+                    data: data,
+                });
+                </script>
+            </div>
+        </div>
+        <div class="row" style="margin: 4em;">
+            <div class="col-md-2">
+                <img src="images/eco_friendly.png">
+            </div>
+            <div class="col-md-4">
+                <canvas id="pieChart" height="250px"></canvas>
+                <script>
+                    var data = {
+                        labels: [
+                            "Total Area Left(sq ft)",
+                            "Total Area Used(sq ft)"
+                        ],
+                        datasets: [{
+                            data: pieDataArray,
+                            backgroundColor: [
+                                "#FF6384",
+                                "#36A2EB"
+                            ],
+                            hoverBackgroundColor: [
+                                "#FF6384",
+                                "#36A2EB"
+                            ]
+                        }]
+                    };             
+                    var ctx= document.getElementById("pieChart");
+                    var myPieChart = new Chart(ctx,{
+                        type: 'pie',
+                        data: data,
+                    });
+                </script>
+            </div>
+            <div class="col-md-4">
+                <canvas id="doughnutChart" height="250px"></canvas>
+                <script>
+                    var data = {
+                        labels: [
+                            "Carbon Emmission Reduced(%)",
+                            "Remaining(%)"
+                        ],
+                        datasets: [{
+                            data: doughnutDataArray,
+                            backgroundColor: [
+                                "#FF6384",
+                                "#36A2EB"
+                            ],
+                            hoverBackgroundColor: [
+                                "#FF6384",
+                                "#36A2EB"
+                            ]
+                        }]
+                    }; 
+                    var ctx= document.getElementById("doughnutChart");
+                    var myDoughnutChart = new Chart(ctx, {
+                        type: 'doughnut',
+                        data: data,
+                    });
+                </script>
+            </div> 
+            <div class="col-md-2">
+                <img src="images/eco_friendly.png">
+            </div>       
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2016, SOL India
+                </div>
+                <div class="col-sm-6">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-2x fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-2x fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-2x fa-twitter"></i></a></li>
+                        <li> <i class="fa fa-2x fa-phone sr-contact"></i> +91 9868831600</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+</body>

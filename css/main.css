@@ -1037,3 +1037,10 @@ ul.nostyle i {
 .team-lower-team img{
   width: 50%;
 }
+
+/*--------------OFFERINGS-----------*/
+.input-group-addon{
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #5bc0de;
+}
