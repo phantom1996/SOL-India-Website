@@ -42,30 +42,44 @@
             var bill = form.elements.namedItem("monthlyBill").value;
             var load = form.elements.namedItem("load").value;
             var area = form.elements.namedItem("area").value;
-            var type = form.elements.namedItem("connectionType").value;
+            var annualYield;
+            var annualSaving;
+            var unitPrice = 11;
+
+            /*Load/Area Check*/
+            if(area < load*8){
+            	load = area/8;
+            	form.elements.namedItem("load").value = load;
+            }
+            annualYield = load * 5 * 365;
+            annualSaving = annualYield * unitPrice;
+
             /*Value changes for barDataArray*/
             barDataArray[0]=bill;
-            barDataArray[1]=bill*0.48;
+            barDataArray[1]=bill - (load * 5 * 30 * 11);
 
             /*Value changes for lineDataArray*/
             lineDataArray[0]=-1*load*90000;
-            lineDataArray[1]=lineDataArray[0]+(-1*lineDataArray[0]);
-            lineDataArray[2]=lineDataArray[1]+(-1*lineDataArray[0]);
-            lineDataArray[3]=lineDataArray[2]+(-1*lineDataArray[0]);
-            lineDataArray[4]=lineDataArray[3]+(-1*lineDataArray[0]);
-            lineDataArray[5]=lineDataArray[4]+(-1*lineDataArray[0]);
+            lineDataArray[1]=lineDataArray[0]+annualSaving*5;
+            lineDataArray[2]=lineDataArray[1]+annualSaving*5;
+            lineDataArray[3]=lineDataArray[2]+annualSaving*5;
+            lineDataArray[4]=lineDataArray[3]+annualSaving*5;
+            lineDataArray[5]=lineDataArray[4]+annualSaving*5;
 
             /*Value changes for pieDataArray*/
-            pieDataArray[1]=load*43;
+            pieDataArray[1]=load*8;
             pieDataArray[0]=area-pieDataArray[1];
             if(pieDataArray[0]<0) pieDataArray[0]=0;
 
             /*Value changes for doughnutDataArray*/
-            doughnutDataArray[0]=62;
-            doughnutDataArray[1]=48;
+            var totalEmmission = ((bill/unitPrice)*12*0.9)/1000;
+            var savedEmmission = (annualYield * 0.52)/1000;
+            doughnutDataArray[0]= Math.round(savedEmmission*1000)/1000;
+            doughnutDataArray[1]=Math.round((totalEmmission-savedEmmission)*1000)/1000;
+            if(doughnutDataArray[1]<0) doughnutDataArray[1]=0;
 
             /* Value change for system cost*/
-            document.getElementById("system-cost").innerHTML=-1*lineDataArray[0];
+            document.getElementById("annual-savings").innerHTML=Math.floor(annualSaving);
 
             myBarChart.update();
             myLineChart.update();
@@ -110,7 +124,7 @@
     <form id="solar-calculator-form" onsubmit="return onformsubmit()">
         <div class="row">
           <h1 style="text-align: center; margin-bottom: 40px; margin-top: -15px; color: #428bca;">Get A Quote Now</h1>
-          <div class="col-md-2 col-md-offset-1">
+          <div class="col-md-4">
             <div class="form-group">
               <label for="">Monthly Bill</label>
               <div class="input-group">
@@ -121,7 +135,7 @@
             </div>
           </div>
 
-          <div class="col-md-2">
+          <div class="col-md-4">
             <div class="form-group">
               <label for="">Connected Load</label>
               <div class="input-group">
@@ -132,16 +146,18 @@
             </div>
           </div>
 
-          <div class="col-md-2">
+          <div class="col-md-4">
             <div class="form-group">
               <label for="">Available Area</label>
               <div class="input-group">
                 <input type="number" class="form-control" id="area1"
                 name="area" autocomplete="off" placeholder="Total Area" required>
-                <div class="input-group-addon">Sq.Ft.</div>
+                <div class="input-group-addon">Sq.m.</div>
               </div>
             </div>
           </div>
+
+          <!--
 
           <div class="col-md-5">
             <div class="form-group">
@@ -162,6 +178,8 @@
               </div>
             </div>
           </div>
+
+          -->
 
         </div>
         <div class="row" style="margin-top: 40px;">
@@ -209,9 +227,9 @@
                 </script>
             </div>
             <div class="col-md-4" style="text-align: center;">
-                <h1 style="color: #4A6D8B; font-size: 3.5em;">System Cost</h1>
+                <h1 style="color: #4A6D8B; font-size: 3.5em;">Annual Savings*</h1>
                 <h2 style="color: #4A6D8B; font-size: 3.5em;">
-                <i class="fa fa-3x fa-rupee"></i><span id="system-cost"></span>
+                <i class="fa fa-3x fa-rupee"></i><span id="annual-savings"></span>
                 </h2>
             </div>
             <div class="col-md-4" style="text-align: center;">
@@ -259,8 +277,8 @@
                 <script>
                     var data = {
                         labels: [
-                            "Total Area Left(sq ft)",
-                            "Total Area Used(sq ft)"
+                            "Total Area Left(sq m)",
+                            "Total Area Used(sq m)"
                         ],
                         datasets: [{
                             data: pieDataArray,
@@ -286,8 +304,8 @@
                 <script>
                     var data = {
                         labels: [
-                            "Carbon Emmission Reduced(%)",
-                            "Remaining(%)"
+                            "Carbon Emission Reduced(tons)",
+                            "Remaining(tons)"
                         ],
                         datasets: [{
                             data: doughnutDataArray,
