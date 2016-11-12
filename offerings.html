@@ -79,7 +79,11 @@
             if(doughnutDataArray[1]<0) doughnutDataArray[1]=0;
 
             /* Value change for system cost*/
-            document.getElementById("annual-savings").innerHTML=Math.floor(annualSaving);
+            document.getElementById("annual-savings").innerHTML=Math.floor(annualSaving)+"*";
+            /* Convert Yield to MW */
+            annualYield = annualYield/1000;
+            annualYield = Math.round(annualYield);
+            document.getElementById("size-info").innerHTML="System Size: " + load + "KW & Annual Yield: " + annualYield + "MWh*";
 
             myBarChart.update();
             myLineChart.update();
@@ -227,10 +231,11 @@
                 </script>
             </div>
             <div class="col-md-4" style="text-align: center;">
-                <h1 style="color: #4A6D8B; font-size: 3.5em;">Annual Savings*</h1>
+                <h1 style="color: #4A6D8B; font-size: 3.5em;">Annual Savings</h1>
                 <h2 style="color: #4A6D8B; font-size: 3.5em;">
                 <i class="fa fa-3x fa-rupee"></i><span id="annual-savings"></span>
                 </h2>
+                <p style="color: #4A6D8B; font-size: 1.5em; font-weight: bold;" id="size-info" ></p>
             </div>
             <div class="col-md-4" style="text-align: center;">
                 <canvas id="lineChart" height="250px"></canvas>
@@ -330,6 +335,10 @@
                 <img src="images/eco_friendly.png">
             </div>       
         </div>
+    </div>
+
+    <div>
+    	<p style="text-align: center; font-size: 1.5em;"><a href="#">Contact Us</a> for more information.</p> 
     </div>
 
     <footer id="footer">
