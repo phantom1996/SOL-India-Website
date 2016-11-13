@@ -233,16 +233,8 @@
 
   // Automatically bind links with rel="modal:close" to, well, close the modal.
   $(document).on('click.modal', 'a[rel~="modal:close"]', $.modal.close);
-  $('a[rel~="modal:open"]').click(function(){
+  $(document).on('click.modal', 'a[rel~="modal:open"]', function(event) {
     event.preventDefault();
-    $('#ex1 h3').html($(this).attr("data-name"));
-    
-    var images = $(this).find("img");
-    var imgsrc = images.attr("src");
-
-    $("#ex1 img").attr("src",imgsrc);
-    $('#ex1 .title').html("<span>" + $(this).attr("data-title") + "</span>");
-    $('#ex1 .description').html($(this).attr("data-bio"));
-    $(this).modal();  })
-
+    $(this).modal();
+  });
 }));
