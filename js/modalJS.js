@@ -5,6 +5,7 @@ $(document).ready(function(){
 	document.getElementById("output").innerHTML="";
     });
 });
+
 function areaclick()
 {
 	document.getElementById("areaInput").style.display="";
@@ -26,13 +27,17 @@ function loadclick()
 function getarea(input) 
 {     
 	var elementValue = input.value;
+	var annualYield = ((elementValue/8)*5*365)/1000; //MWh
+	var emissionReduced = annualYield*0.52; //tons
 	var link = '<a href="offerings.html"> Know More </a>';
-	document.getElementById("output").innerHTML="You can have load upto " + Math.round((elementValue/8)*100)/100 + " KW." + link; 
+	document.getElementById("output").innerHTML="Your solar potential is upto " + Math.round((elementValue/8)*100)/100 + " KW." + link; 
 }
 
 function getload(input)
 {
 	var elementValue = input.value;
+	var annualYield = (elementValue*5*365)/1000; //MWh
+	var emissionReduced = annualYield*0.52; //tons
 	var link = '<a href="offerings.html"> Know More </a>';
 	document.getElementById("output").innerHTML="Required area is " + elementValue*8 + " Sq. m." + link;
 }
