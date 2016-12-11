@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Solar Calculator|SOL India</title>
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/jquery.modal.css" rel="stylesheet">
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/logo.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <script>
+
+    var moreclick=0;
+
+    function onformsubmit(){
+        var form = document.getElementById("solar-calculator-form");        
+        var bulb = form.elements.namedItem("bulb").value;        
+        var fan = form.elements.namedItem("fan").value;        
+        var ac = form.elements.namedItem("ac").value;        
+        var cooler = form.elements.namedItem("cooler").value;        
+        var pc = form.elements.namedItem("pc").value;        
+        var water = form.elements.namedItem("water").value;        
+        var washing = form.elements.namedItem("washing").value;        
+        var refrigerator = form.elements.namedItem("refrigerator").value;
+
+
+        var num1 = form.elements.namedItem("num1").value;
+        var watt1 = form.elements.namedItem("watt1").value;
+        var hr1 = form.elements.namedItem("hr1").value;
+        var num2 = form.elements.namedItem("num2").value;
+        var watt2 = form.elements.namedItem("watt2").value;
+        var hr2 = form.elements.namedItem("hr2").value;
+        var num3 = form.elements.namedItem("num3").value;
+        var watt3 = form.elements.namedItem("watt3").value;
+        var hr3 = form.elements.namedItem("hr3").value;
+
+        var total_unit_per_day = (bulb*0.6)+(fan*0.9)+(ac*10.8)+(cooler*10.8)+(pc*0.3)+(water*1)+(washing*0.15)+(refrigerator*3)+((num1*watt1*hr1)/1000)+((num2*watt2*hr2)/1000)+((num3*watt3*hr3)/1000);
+        var system_size = total_unit_per_day/4.5;
+        var annualYield = (total_unit_per_day*365)/1000; //MWh
+        var annualSaving = 0;
+        var temp= total_unit_per_day*30;
+        if(temp>1200){
+            annualSaving+= (temp-1200)*8.75;
+            temp = 1200;
+        }
+        if(temp>800){
+            annualSaving+= (temp-800)*8.10;
+            temp = 800;
+        }
+        if(temp>400){
+            annualSaving+= (temp-400)*7.30;
+            temp = 400;
+        }
+        if(temp>200){
+            annualSaving+= (temp-200)*5.9;
+            temp = 200;
+        }
+        if(temp>0){
+            annualSaving+= temp*4;
+        }
+        annualSaving*=12;
+        document.getElementById("size").innerHTML=Math.round(system_size*10)/10 + ' ';
+        document.getElementById("yield").innerHTML=Math.round(total_unit_per_day*3.650)/10 + '* ';
+        document.getElementById("saving").innerHTML=Math.round(annualSaving*10)/10 + '*';
+
+        document.getElementById("outputs").focus();
+        return false;
+    }
+
+    function addmore(){
+        if(moreclick==0){
+            document.getElementById("extra1").style.display = "block";
+            moreclick+=1;
+            return;
+        }
+        if(moreclick==1){
+            document.getElementById("extra2").style.display = "block";
+            moreclick+=1;
+            return;
+        }
+        if(moreclick==2){
+            document.getElementById("extra3").style.display = "block";
+            document.getElementById("moreAppliances").style.cursor = "not-allowed";
+            moreclick+=1;
+        }
+    }
+    </script>
+
+</head><!--/head-->
+
+<body id="home" class="homepage" style="overflow-x: hidden;">
+
+    <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-left">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html"><img src="images/logo.png" style="width:200px; height: 30px; margin-left: -20px; margin-right: 30px;"></a></li>
+                        <li class="scroll"><a href="index.html#about">Overview</a></li>
+                        <li class="scroll"><a href="offerings.html">Offerings</a></li>
+                        <li class="scroll"><a href="#">Finance</a></li>
+                        <li class="scroll"><a href="#">Projects</a></li>
+                        <li class="scroll"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <div style="padding: 4em; padding-top: 5em; background: url(images/texture.jpg);">
+    <form id="solar-calculator-form" onsubmit="return onformsubmit()">
+        <div class="row">
+          <h1 style="text-align: center; margin-bottom: 40px; margin-top: -15px; color: #428bca;">Get A Quote Now</h1>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Number of CFL/LED Bulbs &nbsp;</label>
+              <img src="images/bulb.png" style="margin-bottom: 9px; margin-top: 2px;">              
+              <div class="input-group">
+                <input type="number" name="bulb" autocomplete="off"
+                class="form-control " id="bulb1" placeholder="Total Items" required >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Number of Fans &nbsp;</label>
+              <img src="images/fan.png" style="margin-bottom: 5px;">              
+              <div class="input-group">
+                <input type="number" name="fan" autocomplete="off"
+                class="form-control " id="fan1" placeholder="Total Items" required >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Number of ACs &nbsp;</label>
+              <img src="images/ac.png" style="margin-bottom: 5px;">              
+              <div class="input-group">
+                <input type="number" name="ac" autocomplete="off"
+                class="form-control " id="ac1" placeholder="Total Items" required >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Number of Coolers &nbsp;</label>
+              <img src="images/cooler.png" style="margin-bottom: 5px;">              
+              <div class="input-group">
+                <input type="number" name="cooler" autocomplete="off"
+                class="form-control " id="cooler1" placeholder="Total Items" required >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 40px;">
+            
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Number of PC/Laptop/TV &nbsp;</label>
+              <img src="images/pc.png" style="margin-bottom: 9px; margin-top: 2px;">              
+              <div class="input-group">
+                <input type="number" name="pc" autocomplete="off"
+                class="form-control " id="pc1" placeholder="Total Items" required >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Number of Water Pumps &nbsp;</label>
+              <img src="images/water.png" style="margin-bottom: 5px;">              
+              <div class="input-group">
+                <input type="number" name="water" autocomplete="off"
+                class="form-control " id="water" placeholder="Total Items" required >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Number of Washing Machines &nbsp;</label>
+              <img src="images/washing.png" style="margin-bottom: 5px;">              
+              <div class="input-group">
+                <input type="number" name="washing" autocomplete="off"
+                class="form-control " id="washing1" placeholder="Total Items" required >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Number of Refrigerator &nbsp;</label>
+              <img src="images/refrigerator.png" style="margin-bottom: 5px;">              
+              <div class="input-group">
+                <input type="number" name="refrigerator" autocomplete="off"
+                class="form-control " id="refrigerator1" placeholder="Total Items" required >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div> 
+            <h4 style="text-align: center; color: #428bca; cursor: pointer; margin: 20px;" onclick="addmore()" id="moreAppliances">Add More Appliances
+            <icon class="fa fa-plus-square"></icon></h4>
+
+            <div class="row" style="text-align: center; display: none;" id="extra1">
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="">Number of appliance</label>
+                        <div class="input-group"> 
+                        <div class="input-group-addon"></div>
+                        <input type="number" name="num1" autocomplete="off"
+                        class="form-control " id="num1_1" placeholder="Total Items">
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="">Wattage</label>
+                      <div class="input-group">
+                        <div class="input-group-addon"></div>
+                        <input type="number" name="watt1" autocomplete="off"
+                        class="form-control " id="watt1_1" placeholder="Total Wattage">
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="">Daily average use (in hours)</label>
+                      <div class="input-group">
+                        <div class="input-group-addon"></div>
+                        <input type="number" name="hr1" autocomplete="off"
+                        class="form-control " id="hr1_1" placeholder="Total Items">
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="text-align: center; display: none;" id="extra2">
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="">Number of appliance</label>
+                        <div class="input-group"> 
+                        <div class="input-group-addon"></div>
+                        <input type="number" name="num2" autocomplete="off"
+                        class="form-control " id="num2_1" placeholder="Total Items">
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="">Wattage</label>
+                      <div class="input-group">
+                        <div class="input-group-addon"></div>
+                        <input type="number" name="watt2" autocomplete="off"
+                        class="form-control " id="watt2_1" placeholder="Total Wattage">
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="">Daily average use (in hours)</label>
+                      <div class="input-group">
+                        <div class="input-group-addon"></div>
+                        <input type="number" name="hr2" autocomplete="off"
+                        class="form-control " id="hr2_1" placeholder="Total Items">
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="text-align: center; display: none;" id="extra3">
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="">Number of appliance</label>
+                        <div class="input-group"> 
+                        <div class="input-group-addon"></div>
+                        <input type="number" name="num3" autocomplete="off"
+                        class="form-control " id="num3_1" placeholder="Total Items">
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="">Wattage</label>
+                      <div class="input-group">
+                        <div class="input-group-addon"></div>
+                        <input type="number" name="watt3" autocomplete="off"
+                        class="form-control " id="watt3_1" placeholder="Total Wattage">
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="">Daily average use (in hours)</label>
+                      <div class="input-group">
+                        <div class="input-group-addon"></div>
+                        <input type="number" name="hr3" autocomplete="off"
+                        class="form-control " id="hr3_1" placeholder="Total Items">
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 40px;">
+          <div class="col-md-offset-4 col-md-4">
+            <input class="btn btn-primary btn-block" type="submit" value="Calculate My Savings"/>
+          </div>
+        </div>
+    </form>
+    </div>
+
+    <div class="row" id="outputs" tabindex="-1">
+        <div class="col-md-4" style="text-align: center;">
+            <h1 style="color: #4A6D8B; font-size: 3.5em;">System Size</h1>
+            <h2 style="color: #4A6D8B; font-size: 3.5em;">
+            <span id="size"></span><span style="font-size: 1.8em;">KW</span>
+            </h2>
+        </div> 
+        <div class="col-md-4" style="text-align: center;">
+            <h1 style="color: #4A6D8B; font-size: 3.5em;">Annual Yield</h1>
+            <h2 style="color: #4A6D8B; font-size: 3.5em;">
+            <span id="yield"></span><span style="font-size: 1.8em;">MWh</span>
+            </h2>
+        </div> 
+        <div class="col-md-4" style="text-align: center;">
+            <h1 style="color: #4A6D8B; font-size: 3.5em;">Annual Savings</h1>
+            <h2 style="color: #4A6D8B; font-size: 3.5em;">
+            <i class="fa fa-2x fa-rupee"></i><span id="saving"></span>
+            </h2>
+        </div>        
+    </div>
+
+    <div>
+    	<p style="text-align: center; font-size: 1.5em; margin: 20px;"><a href="#">Contact Us</a> for more information.</p> 
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2016, SOL India
+                </div>
+                <div class="col-sm-6">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-2x fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-2x fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-2x fa-twitter"></i></a></li>
+                        <li> <i class="fa fa-2x fa-phone sr-contact"></i> +91 9868831600</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+</body>
