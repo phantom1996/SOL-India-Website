@@ -18,7 +18,7 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    
+
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -34,14 +34,14 @@
     var moreclick=0;
 
     function onformsubmit(){
-        var form = document.getElementById("solar-calculator-form");        
-        var bulb = form.elements.namedItem("bulb").value;        
-        var fan = form.elements.namedItem("fan").value;        
-        var ac = form.elements.namedItem("ac").value;        
-        var cooler = form.elements.namedItem("cooler").value;        
-        var pc = form.elements.namedItem("pc").value;        
-        var water = form.elements.namedItem("water").value;        
-        var washing = form.elements.namedItem("washing").value;        
+        var form = document.getElementById("solar-calculator-form");
+        var bulb = form.elements.namedItem("bulb").value;
+        var fan = form.elements.namedItem("fan").value;
+        var ac = form.elements.namedItem("ac").value;
+        var cooler = form.elements.namedItem("cooler").value;
+        var pc = form.elements.namedItem("pc").value;
+        var water = form.elements.namedItem("water").value;
+        var washing = form.elements.namedItem("washing").value;
         var refrigerator = form.elements.namedItem("refrigerator").value;
 
 
@@ -132,6 +132,7 @@
                         <li class="scroll"><a href="#">Finance</a></li>
                         <li class="scroll"><a href="#">Projects</a></li>
                         <li class="scroll"><a href="#">Contact Us</a></li>
+                        <li class="scroll"><a href="mail.html">Mail</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -146,7 +147,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="">Number of CFL/LED Bulbs &nbsp;</label>
-              <img src="images/bulb.png" style="margin-bottom: 9px; margin-top: 2px;">              
+              <img src="images/bulb.png" style="margin-bottom: 9px; margin-top: 2px;">
               <div class="input-group">
                 <input type="number" name="bulb" autocomplete="off"
                 class="form-control " id="bulb1" placeholder="Total Items" required >
@@ -157,7 +158,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="">Number of Fans &nbsp;</label>
-              <img src="images/fan.png" style="margin-bottom: 5px;">              
+              <img src="images/fan.png" style="margin-bottom: 5px;">
               <div class="input-group">
                 <input type="number" name="fan" autocomplete="off"
                 class="form-control " id="fan1" placeholder="Total Items" required >
@@ -168,7 +169,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="">Number of ACs &nbsp;</label>
-              <img src="images/ac.png" style="margin-bottom: 5px;">              
+              <img src="images/ac.png" style="margin-bottom: 5px;">
               <div class="input-group">
                 <input type="number" name="ac" autocomplete="off"
                 class="form-control " id="ac1" placeholder="Total Items" required >
@@ -179,7 +180,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="">Number of Coolers &nbsp;</label>
-              <img src="images/cooler.png" style="margin-bottom: 5px;">              
+              <img src="images/cooler.png" style="margin-bottom: 5px;">
               <div class="input-group">
                 <input type="number" name="cooler" autocomplete="off"
                 class="form-control " id="cooler1" placeholder="Total Items" required >
@@ -189,11 +190,11 @@
         </div>
 
         <div class="row" style="margin-top: 40px;">
-            
+
           <div class="col-md-3">
             <div class="form-group">
               <label for="">Number of PC/Laptop/TV &nbsp;</label>
-              <img src="images/pc.png" style="margin-bottom: 9px; margin-top: 2px;">              
+              <img src="images/pc.png" style="margin-bottom: 9px; margin-top: 2px;">
               <div class="input-group">
                 <input type="number" name="pc" autocomplete="off"
                 class="form-control " id="pc1" placeholder="Total Items" required >
@@ -204,7 +205,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="">Number of Water Pumps &nbsp;</label>
-              <img src="images/water.png" style="margin-bottom: 5px;">              
+              <img src="images/water.png" style="margin-bottom: 5px;">
               <div class="input-group">
                 <input type="number" name="water" autocomplete="off"
                 class="form-control " id="water" placeholder="Total Items" required >
@@ -215,7 +216,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="">Number of Washing Machines &nbsp;</label>
-              <img src="images/washing.png" style="margin-bottom: 5px;">              
+              <img src="images/washing.png" style="margin-bottom: 5px;">
               <div class="input-group">
                 <input type="number" name="washing" autocomplete="off"
                 class="form-control " id="washing1" placeholder="Total Items" required >
@@ -226,7 +227,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="">Number of Refrigerator &nbsp;</label>
-              <img src="images/refrigerator.png" style="margin-bottom: 5px;">              
+              <img src="images/refrigerator.png" style="margin-bottom: 5px;">
               <div class="input-group">
                 <input type="number" name="refrigerator" autocomplete="off"
                 class="form-control " id="refrigerator1" placeholder="Total Items" required >
@@ -235,7 +236,7 @@
           </div>
         </div>
 
-        <div> 
+        <div>
             <h4 style="text-align: center; color: #428bca; cursor: pointer; margin: 20px;" onclick="addmore()" id="moreAppliances">Add More Appliances
             <icon class="fa fa-plus-square"></icon></h4>
 
@@ -243,7 +244,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                       <label for="">Number of appliance</label>
-                        <div class="input-group"> 
+                        <div class="input-group">
                         <div class="input-group-addon"></div>
                         <input type="number" name="num1" autocomplete="off"
                         class="form-control " id="num1_1" placeholder="Total Items">
@@ -276,7 +277,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                       <label for="">Number of appliance</label>
-                        <div class="input-group"> 
+                        <div class="input-group">
                         <div class="input-group-addon"></div>
                         <input type="number" name="num2" autocomplete="off"
                         class="form-control " id="num2_1" placeholder="Total Items">
@@ -309,7 +310,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                       <label for="">Number of appliance</label>
-                        <div class="input-group"> 
+                        <div class="input-group">
                         <div class="input-group-addon"></div>
                         <input type="number" name="num3" autocomplete="off"
                         class="form-control " id="num3_1" placeholder="Total Items">
@@ -353,23 +354,23 @@
             <h2 style="color: #4A6D8B; font-size: 3.5em;">
             <span id="size"></span><span style="font-size: 1.8em;">KW</span>
             </h2>
-        </div> 
+        </div>
         <div class="col-md-4" style="text-align: center;">
             <h1 style="color: #4A6D8B; font-size: 3.5em;">Annual Yield</h1>
             <h2 style="color: #4A6D8B; font-size: 3.5em;">
             <span id="yield"></span><span style="font-size: 1.8em;">MWh</span>
             </h2>
-        </div> 
+        </div>
         <div class="col-md-4" style="text-align: center;">
             <h1 style="color: #4A6D8B; font-size: 3.5em;">Annual Savings</h1>
             <h2 style="color: #4A6D8B; font-size: 3.5em;">
             <i class="fa fa-2x fa-rupee"></i><span id="saving"></span>
             </h2>
-        </div>        
+        </div>
     </div>
 
     <div>
-    	<p style="text-align: center; font-size: 1.5em; margin: 20px;"><a href="#">Contact Us</a> for more information.</p> 
+    	<p style="text-align: center; font-size: 1.5em; margin: 20px;"><a href="#">Contact Us</a> for more information.</p>
     </div>
 
     <footer id="footer">

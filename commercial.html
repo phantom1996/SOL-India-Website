@@ -20,7 +20,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Chartjs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
-    
+
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 
-    <script> 
+    <script>
     	var barDataArray = [0,0];
         var lineDataArray = [0, 0, 0, 0, 0, 0];
         var pieDataArray = [1,0];
@@ -119,6 +119,7 @@
                         <li class="scroll"><a href="#">Finance</a></li>
                         <li class="scroll"><a href="#">Projects</a></li>
                         <li class="scroll"><a href="#">Contact Us</a></li>
+                        <li class="scroll"><a href="mail.html">Mail</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -144,7 +145,7 @@
             <div class="form-group">
               <label for="">Connected Load</label>
               <div class="input-group">
-                <input type="number" class="form-control" name="load" 
+                <input type="number" class="form-control" name="load"
                 autocomplete="off" id="load1" placeholder="As per your bill" required>
                 <div class="input-group-addon">KW </div>
               </div>
@@ -265,7 +266,7 @@
                         data: lineDataArray,
                         spanGaps: false,
                     }]
-                };              
+                };
                 var ctx= document.getElementById("lineChart");
                 var myLineChart = new Chart(ctx, {
                     type: 'line',
@@ -297,7 +298,7 @@
                                 "#36A2EB"
                             ]
                         }]
-                    };             
+                    };
                     var ctx= document.getElementById("pieChart");
                     var myPieChart = new Chart(ctx,{
                         type: 'pie',
@@ -324,22 +325,22 @@
                                 "#36A2EB"
                             ]
                         }]
-                    }; 
+                    };
                     var ctx= document.getElementById("doughnutChart");
                     var myDoughnutChart = new Chart(ctx, {
                         type: 'doughnut',
                         data: data,
                     });
                 </script>
-            </div> 
+            </div>
             <div class="col-md-2">
                 <img src="images/eco_friendly.png">
-            </div>       
+            </div>
         </div>
     </div>
 
     <div>
-    	<p style="text-align: center; font-size: 1.5em;"><a href="#">Contact Us</a> for more information.</p> 
+    	<p style="text-align: center; font-size: 1.5em;"><a href="#">Contact Us</a> for more information.</p>
     </div>
 
     <footer id="footer">
