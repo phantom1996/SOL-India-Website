@@ -15,6 +15,6 @@
     width:inherit;
     height:inherit;
     /* To center horizontally */
-    margin: 0 auto;
+    margin: 5 auto;
     pointer-events: all;
 }
